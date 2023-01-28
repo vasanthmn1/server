@@ -7,7 +7,7 @@ const parser = require('body-parser')
 const dotenv = require('dotenv')
 const user = require('./router/userRoutes')
 const { errHandel } = require('./middleware/errmiddelware')
-const port = process.env.PORT
+const port = process.env.PORT || 6000
 dotenv.config()
 const app = express()
 app.use(cors())
