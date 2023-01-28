@@ -7,7 +7,7 @@ const parser = require('body-parser')
 const dotenv = require('dotenv')
 const user = require('./router/userRoutes')
 const { errHandel } = require('./middleware/errmiddelware')
-const port = process.env.PORT
+const port = 10000
 dotenv.config()
 const app = express()
 app.use(cors())
@@ -22,5 +22,5 @@ connetDB()
 app.use('/user', user)
 app.use(errHandel)
 app.listen(port, () => {
-    console.log(`conting${port}`);
+    console.log(`contingAll${port}`);
 })
