@@ -4,11 +4,11 @@ const connetDB = require('./config/conntingDB')
 const cors = require('cors')
 const colors = require('colors')
 const parser = require('body-parser')
-const dotenv = require('dotenv').config()
+const dotenv = require('dotenv')
 const user = require('./router/userRoutes')
 const { errHandel } = require('./middleware/errmiddelware')
 const port = process.env.PORT
-
+dotenv.config()
 const app = express()
 app.use(cors())
 
